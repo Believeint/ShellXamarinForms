@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ShellXamarinForms.AppShell">
+    
+    <Shell.Resources>
+        
+        <Style x:Key="EstiloBase"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#455A64" />
+            <Setter Property="Shell.ForegroundColor"
+                    Value="White" />
+            <Setter Property="Shell.TitleColor"
+                    Value="White" />
+            <Setter Property="Shell.DisabledColor"
+                    Value="#B4FFFFFF" />
+            <Setter Property="Shell.UnselectedColor"
+                    Value="#95FFFFFF" />
+        </Style>
+
+        <Style TargetType="ShellItem"
+               BasedOn="{StaticResource EstiloBase}" />
+
+        <Style x:Key="ShellDomestico" 
+               TargetType="Element"
+               BasedOn="{StaticResource EstiloBase}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#039BE6" />
+        </Style>
+
+        <Style x:Key="ShellPrimatas"
+               TargetType="Element"
+               BasedOn="{StaticResource EstiloBase}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#689F39" />
+        </Style>
+
+        <Style x:Key="ShellElefantes"
+               TargetType="Element"
+               BasedOn="{StaticResource EstiloBase}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#ED3B3B" />
+        </Style>
+
+        <Style x:Key="ShellUrsos"
+               TargetType="Element"
+               BasedOn="{StaticResource EstiloBase}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#546DFE" />
+        </Style>
+
+        <Style x:Key="ShellSobre"
+               TargetType="Element"
+               BasedOn="{StaticResource EstiloBase}">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#96D1FF" />
+        </Style>
+
+    </Shell.Resources>
+
+    
+    
+</Shell>
