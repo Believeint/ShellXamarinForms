@@ -7,6 +7,7 @@ using Xamarin.Essentials;
 using System.Threading.Tasks;
 using System.Linq;
 using ShellXamarinForms.View.Detalhes;
+using ShellXamarinForms.Data;
 
 namespace ShellXamarinForms
 {
@@ -46,7 +47,40 @@ namespace ShellXamarinForms
 
             switch(rotaDestino)
             {
-                            }
+                case "detalhesprimatas":
+                    animalNome = PrimatasData.Primatas.ElementAt(rand.Next(0, PrimatasData.Primatas.Count)).Nome;
+                    break;
+                case "detalhesgatos":
+                    animalNome = GatosData.Gatos.ElementAt(rand.Next(0, GatosData.Gatos.Count)).Nome;
+                    break;
+                case "detalhescaes":
+                    animalNome = CaesData.Caes.ElementAt(rand.Next(0, CaesData.Caes.Count)).Nome;
+                    break;
+                case "detalheselefantes":
+                    animalNome = ElefantesData.Elefantes.ElementAt(rand.Next(0, ElefantesData.Elefantes.Count)).Nome;
+                    break;
+                case "detalhesursos":
+                    animalNome = UrsosData.Ursos.ElementAt(rand.Next(0, UrsosData.Ursos.Count)).Nome;
+                    break;
+            }
+
+            ShellNavigationState estado = Shell.Current.CurrentState;
+            await Shell.Current.GoToAsync($"{estado.Location}/{rotaDestino}?nome={animalNome}");
+            Shell.Current.FlyoutIsPresented = false;
+
+        }
+
+        void OnNavigating(object sender, ShellNavigatingEventArgs e)
+        {
+            // Cancelar Navegação anterior
+            //if (e.Source == ShellNavigationSource.Pop)
+            //{
+            //    e.Cancel();
+            //}
+        }
+
+        void OnNavigated(object sender, ShellNavigatedEventArgs e)
+        {
         }
     }
 }

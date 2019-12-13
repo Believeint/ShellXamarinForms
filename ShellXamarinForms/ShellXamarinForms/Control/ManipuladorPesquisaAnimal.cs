@@ -41,7 +41,7 @@ namespace ShellXamarinForms.Control
 
         string GetAlvoNavegacao()
         {
-            string = "";
+            return (Shell.Current as AppShell).Rotas.FirstOrDefault(rota => rota.Value.Equals(ItemSelecionadoNavegacao)).Key;
         }
     }
 }
