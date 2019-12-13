@@ -24,6 +24,7 @@ namespace ShellXamarinForms
         {
             InitializeComponent();
             RegistrarRotas();
+            BindingContext = this;
         }
 
         void RegistrarRotas()

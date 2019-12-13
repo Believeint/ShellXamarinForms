@@ -34,7 +34,6 @@ namespace ShellXamarinForms.Control
 
            // Nota: as strings serão codificadas em URL para navegação(por exemplo, "Blue Monkey" se torna "Blue% 20Monkey"). Portanto, decodifique no receptor.
            // Isso funciona porque os nomes das rotas são exclusivos neste aplicativo.
-
            ShellNavigationState estado = (App.Current.MainPage as Shell).CurrentState;
             await Shell.Current.GoToAsync($"{GetAlvoNavegacao()}?nome={((Animal)item).Nome}");
         }

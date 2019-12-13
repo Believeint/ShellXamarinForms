@@ -4,7 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ShellXamarinForms.AppShell">
+             x:Class="ShellXamarinForms.AppShell"
+             xmlns:controls="clr-namespace:ShellXamarinForms.Control"
+             xmlns:views="clr-namespace:ShellXamarinForms.View.Detalhes">
     
     <Shell.Resources>
         
@@ -61,6 +63,10 @@
         </Style>
 
     </Shell.Resources>
+
+    <Shell.FlyoutHeader>
+        
+    </Shell.FlyoutHeader>
 
     
     
